@@ -1,0 +1,64 @@
+{
+    "questoes": [
+        { 
+            "id": 1,
+            "pergunta": "Quem te perguntou?",
+            "opcoes": ["Nínguem", "Você", "Eu", "Nós"],
+            "resposta": "Nínguem"
+        },
+        {
+            "id": 2,
+            "pergunta": "Se te dessem um milhão de reais, o que você faria?",
+            "opcoes": ["Guardaria", "Compraria uma casa", "Investiria", "All win no vermelho"],
+            "resposta": "All win no vermelho"
+        },
+        {
+            "id": 3,
+            "pergunta": "Quantos quilos tem 1000 gramas de arroz?",
+            "opcoes": ["todos", "10", "5", "3.47"],
+            "resposta": "todos"
+        },
+        {
+            "id": 4,
+            "pergunta": "Você está respondendo as perguntas com sinceridade?",
+            "opcoes": ["Sim", "Não", "Talvez", "Depende"],
+            "resposta": "Não"
+        },
+        {
+            "id": 5,
+            "pergunta": "Riot Phreak está se aposentando, qual sua reação?",
+            "opcoes": ["Fico triste", "Amém", "Não me importo", "Quem é Riot Phreak?"],
+            "resposta": "Amém"
+        },
+        {
+            "id": 6,
+            "pergunta": "Quantas perguntas tem no banco de dados de perguntas?",
+            "opcoes": ["9.4", "7", "7 bilhões", "10"],
+            "resposta": "10"
+        },
+        {
+            "id": 7,
+            "pergunta": "Qual o ID desta pergunta?",
+            "opcoes": ["7", "6", "8", "9"],
+            "resposta": "7"
+        },
+        {
+            "id": 8,
+            "pergunta": "Qual o nome do criador deste quiz?",
+            "opcoes": ["Nickão Anomaly", "Robson Autopeças", "Só bolinhas", "Chillplaymaxxer"],
+            "resposta": "Nickão Anomaly"
+        },
+        {
+            "id": 9,
+            "pergunta": "Qual a chance do Felipe ler essa pergunta?",
+            "opcoes": ["0%", "50%", "100%", "10%"],
+            "resposta": "50%"
+        },
+        {
+            "id": 10,
+            "pergunta": "Você tem 25% de chance de acertar essa pergunta, qual sua resposta?",
+            "opcoes": ["A", "B", "C", "D"],
+            "resposta": "D"
+        }
+    ]
+}

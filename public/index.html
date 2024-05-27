@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Game</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Quiz</title>
 </head>
 <body>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">Quiz Game</a>
-        </div>
-    </nav>
     <div class="container">
-        <div id="message" class="card-panel"></div>
+        <h1 id="titulo" class="text-center mt-5">Bem-vindo ao Quiz insane 10 mil HARDcore!</h1>
+        <div id="secaoRegistro">
+            <input type="text" id="nome" class="form-control" placeholder="Digite seu nome">
+            <button id="registrarBtn" class="btn btn-primary mt-2">Registrar</button>
+        </div>
+        <div id="secaoQuiz" style="display: none;">
+            <h3 id="pergunta"></h3>
+            <div id="opcoes" class="list-group"></div>
+            <button id="proximaBtn" class="btn btn-primary mt-2" style="display: none;">Próxima</button>
+        </div>
+        <div id="secaoAguardar" style="display: none;">
+            <h3 class="text-center mt-5">Aguarde os outros jogadores...</h3>
+        </div>
+        <div id="secaoPontuacao" style="display: none;">
+            <h3>Pontuação: <span id="pontuacao"></span></h3>
+        </div>
+        <div id="secaoRanking" style="display: none;">
+            <h3>Ranking</h3>
+            <ol id="ranking" class="list-group"></ol>
+        </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="client.js"></script>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="/scripts/client.js"></script>
 </body>
 </html>

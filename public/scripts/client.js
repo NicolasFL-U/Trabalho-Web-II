@@ -12,6 +12,14 @@ document.getElementById('registrarBtn').addEventListener('click', () => {
     document.getElementById('secaoRegistro').style.display = 'none';
 });
 
+document.getElementById('reiniciarBtn').addEventListener('click', () => {
+    socket.emit('voto_reiniciar');
+
+    document.getElementById('secaoRanking').style.display = 'none';
+    document.getElementById('secaoAguardar').style.display = 'block';
+    document.getElementById('secaoPontuacao').style.display = 'none';
+});
+
 socket.on('comecar_quiz', (dadosQuestoes) => {
     questoes = dadosQuestoes;
     indiceAtual = 0;
@@ -19,6 +27,7 @@ socket.on('comecar_quiz', (dadosQuestoes) => {
     document.getElementById('titulo').innerText = 'Quiz em andamento...';
     document.getElementById('secaoQuiz').style.display = 'block';
     document.getElementById('secaoPontuacao').style.display = 'block';
+    document.getElementById('secaoAguardar').style.display = 'none';
     atualizarPontuacao();
     exibirQuestao();
 });
@@ -40,6 +49,13 @@ socket.on('fim_quiz', (vencedor, pontuacoes) => {
         pontuacaoElement.innerText = `${i + 1} - ${pontuacao[0]}: ${pontuacao[1]} pontos`;
         ranking.appendChild(pontuacaoElement);
     });
+});
+
+socket.on('reiniciar', () => {
+    document.getElementById('titulo').innerText = 'Aguardando o início do quiz...';
+    document.getElementById('secaoRanking').style.display = 'none';
+    document.getElementById('secaoRegistro').style.display = 'none';
+    document.getElementById('secaoAguardar').style.display = 'none';
 });
 
 // ----- Funções ----- //

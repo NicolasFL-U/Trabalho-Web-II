@@ -1,5 +1,13 @@
 const socket = io();
 
+document.getElementById('comecarQuizBtn').addEventListener('click', () => {
+    const password = document.getElementById('adminSenha').value;
+    socket.emit('comecar_quiz', password);
+
+    document.getElementById('comecarQuizBtn').style.display = 'none';
+    document.getElementById('adminSenha').style.display = 'none';
+});
+
 socket.on('connect', () => {
     socket.emit('admin_login');
 });
@@ -17,10 +25,8 @@ socket.on('atualizar_pontuacoes', (pontuacoes) => {
     });
 });
 
-document.getElementById('comecarQuizBtn').addEventListener('click', () => {
-    const password = document.getElementById('adminSenha').value;
-    socket.emit('comecar_quiz', password);
-
-    document.getElementById('comecarQuizBtn').style.display = 'none';
-    document.getElementById('adminSenha').style.display = 'none';
+socket.on('reiniciar', () => {
+    document.getElementById('pontuacoes').style.display = 'none';
+    document.getElementById('comecarQuizBtn').style.display = 'block';
+    document.getElementById('adminSenha').style.display = 'block';
 });
